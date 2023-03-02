@@ -15,14 +15,14 @@
     .ImageB{
         width:fit-content;
         height:fit-content;
-        background-color: #A6A6A6;
+        background-color: #F1DBDB;
         border radius: 10px;
         box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
     }
 
     .Cont{
         margin-top: 50px;
-        background-color: #545454;
+        background-color: #EB6666;
         height: max-content;
         border-radius: 15px;
         width: 90%;
@@ -106,6 +106,12 @@
                 <option value="orfebreria">Orfebreria</option>
                 <option value="ceramica">Ceramica</option>
             </select>
+        </div>
+        <div class="row">
+            <label class="NewUser mx-auto" style="color: black; width:fit-content" for="">Link imagen referencia</label>
+        </div>
+        <div class="row">
+            <input class="NewUser mx-auto" type="text" name="image_link" id="" placeholder="Link imagen">
         </div>
         <div class="row">
             <button class="mx-auto submit">Ingresar</button>

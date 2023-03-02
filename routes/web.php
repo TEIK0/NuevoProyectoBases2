@@ -16,19 +16,16 @@ use App\http\Controllers\ObrasController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/menuObra', function () {
     return view('menu.recorridoObra');
 })->name('menuObra');
 
-Route::get('/menuArtista', function () {
+Route::get('/', function () {
     return view('menu.recorridoartista');
 })->name('menuArtista');
 
-Route::get('/menuArtista', [ArtistasController::class, 'index'])->name('menuArtista');
+Route::get('/', [ArtistasController::class, 'index'])->name('menuArtista');
 
 
 Route::get('/menuObra', [PinturasController::class, 'indexm'])->name('menuObra');

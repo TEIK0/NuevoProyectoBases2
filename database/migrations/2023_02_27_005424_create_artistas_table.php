@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('nombre')->unique();
             $table->string('fecha_nacimiento');
             $table->string('nacionalidad');
-            $table->string('biografia');
-            $table->string('fotografia')->nullable()->default('nulo');
+            $table->text('biografia');
+            $table->text('image_link')->nullable()->default('nulo');
             $table->timestamps();
         });
     }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('artista_id')->references('id')->on('artistas')->onDelete('cascade');
             $table->double('precio');
             $table->string('tipo');
-            $table->string('fotografia')->nullable()->default('nulo');
+            $table->text('image_link')->nullable()->default('nulo');
             $table->timestamps();
         });
     }

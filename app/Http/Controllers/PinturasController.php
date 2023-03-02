@@ -33,7 +33,6 @@ class PinturasController extends Controller
             'artista_id' => 'required',
             'precio' => 'required|max:255',
             'tipo' => 'required',
-            'fotografia' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
     
         // Procesamiento de datos de entrada y almacenamiento en la base de datos
@@ -43,15 +42,7 @@ class PinturasController extends Controller
         $pintura->artista_id = $request->input('artista_id');
         $pintura->precio = $request->input('precio');
         $pintura->tipo = $request->input('tipo');
-        
-        // Subir la imagen
-        if ($request->hasFile('fotografia')) {
-            $image = $request->file('fotografia');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/imagenes');
-            $image->move($destinationPath, $filename);
-            $pintura->fotografia = $filename;
-        }
+        $pintura->image_link = $request->input('image_link');
         
         $pintura->save();
     

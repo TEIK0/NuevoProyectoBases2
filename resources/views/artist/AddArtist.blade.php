@@ -12,6 +12,22 @@
     padding-left: 35%;
     }
 
+    .B{
+            
+            width: 150px;
+            height: 50px;
+            background-color: #F1DBDB;
+            border radius: 10px;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+            
+          
+        }
+
+    .DateInput{
+        width:150px;
+        height: 50px;
+    }
+
     .ImageB{
         width:fit-content;
         height:fit-content;
@@ -22,7 +38,7 @@
 
     .Cont{
         margin-top: 50px;
-        background-color: #545454;
+        background-color: #EB6666;
         height: max-content;
         border-radius: 15px;
         width: 90%;
@@ -59,16 +75,23 @@
             <input class="NewUser mx-auto" type="text" name="nombre" id="" placeholder="Nombre autor">
         </div>
         <div class="row">
-        <input min="1000-01-01" max="2023-01-31" name="fecha_nacimiento" id="dob" type="date" class="form-control" placeholder="Date of birth" value="{{ date('m/d/Y') }}"/>
+        <input min="1000-01-01" max="2023-01-31" name="fecha_nacimiento" id="dob" type="date" class="form-control DateInput mx-auto" placeholder="Date of birth" value="{{ date('m/d/Y') }}"/>
         </div>
         <div class="row">
             <input class="NewUser mx-auto" type="text" name="nacionalidad" id="" placeholder="Nacionalidad">
         </div>
         <div class="row">
-            <textarea name="biografia" id="" cols="30" rows="10" placeholder="ingrese biografia"></textarea>
+            <label class="NewUser mx-auto" style="color: black; width:fit-content" for="">Link imagen referencia</label>
         </div>
         <div class="row">
-            <button class="mx-auto">Ingresar</button>
+            <input class="NewUser mx-auto" type="text" name="image_link" id="" placeholder="Link imagen">
+        </div>
+        <div class="row">
+            <textarea name="biografia" id="" cols="30" rows="10" placeholder="ingrese biografia"></textarea>
+        </div>
+
+        <div class="row">
+            <button class="mx-auto B">Ingresar</button>
         </div>
 
         </div>

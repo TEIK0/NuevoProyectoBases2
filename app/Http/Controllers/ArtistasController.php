@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Artista;
+use App\Models\Pintura;
 
 class ArtistasController extends Controller
 {
@@ -21,7 +22,6 @@ class ArtistasController extends Controller
             'fecha_nacimiento' => 'required|date',
             'nacionalidad' => 'required|max:50|min:3',
             'biografia' => 'required|min:3',
-            'fotografia' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
     
         // Procesamiento de datos de entrada y almacenamiento en la base de datos
@@ -30,15 +30,7 @@ class ArtistasController extends Controller
         $artista->fecha_nacimiento = $request->input('fecha_nacimiento');
         $artista->nacionalidad = $request->input('nacionalidad');
         $artista->biografia = $request->input('biografia');
-        
-        // Subir la imagen
-        if ($request->hasFile('fotografia')) {
-            $image = $request->file('fotografia');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/imagenes');
-            $image->move($destinationPath, $filename);
-            $artista->fotografia = $filename;
-        }
+        $artista->image_link = $request->input('image_link');
         
         $artista->save();
     
@@ -49,6 +41,7 @@ class ArtistasController extends Controller
 
     public function show($id){
         $artista = Artista::find($id);
-        return view('mostrar.showArtista', ['artista' => $artista]);
+        $pinturas = Pintura::all();
+        return view('mostrar.showArtista', ['artista' => $artista, 'pinturas' => $pinturas]);
     }
 }

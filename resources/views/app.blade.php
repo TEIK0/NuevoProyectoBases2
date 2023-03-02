@@ -28,7 +28,7 @@
             
         }
         nav{
-            background-color: #545454;
+            background-color: #EB6666;
             width: 95%;
             border-radius: 0px 0px 20px 20px;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
@@ -45,7 +45,7 @@
             
             width: 150px;
             height: 10%;
-            background-color: #A6A6A6;
+            background-color: #F1DBDB;
             border radius: 10px;
             box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
             
@@ -77,11 +77,11 @@
     </style>
 </head> 
 
-<body style="background-color: black">
+<body style="background-color: #F1DBDB">
     <nav class="navbar navbar-expand-lg mx-auto">
         <div class="container-fluid">
           <svg xmlns="http://www.w3.org/2000/svg" class="log" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M512 256c0 .9 0 1.8 0 2.7c-.4 36.5-33.6 61.3-70.1 61.3H344c-26.5 0-48 21.5-48 48c0 3.4 .4 6.7 1 9.9c2.1 10.2 6.5 20 10.8 29.9c6.1 13.8 12.1 27.5 12.1 42c0 31.8-21.6 60.7-53.4 62c-3.5 .1-7 .2-10.6 .2C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm0-96a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM288 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 96a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></svg>
-          <a href="" class="searcher mx-auto"style="color: black">Galeria</a>
+          <a href="{{route('menuArtista')}}" class="searcher mx-auto"style="color: black">Galeria</a>
             <form class="d-flex" >
                 <a href="{{route('menuObra')}}" class="btn sign_logB me-3" type="submit">Lista Obras</a>
               <a href="{{route('menuArtista')}}" class="btn sign_logB me-3" type="submit">Lista Artistas</a>
