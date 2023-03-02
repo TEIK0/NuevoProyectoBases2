@@ -90,7 +90,7 @@
             <label class="NewUser mx-auto" style="color: black; width:fit-content" for="">No esta registrado el artista?</label>
         </div>
         <div class="row">
-            <button class="ImageB  mx-auto">Agregar artista</button>
+            <a href="{{route('addArtist')}}" class="ImageB  mx-auto">Agregar artista</a>
         </div>
         <div class="row">
             <input class="NewUser mx-auto" type="number" name="precio" step="any" id="" min="1" placeholder="Precio">

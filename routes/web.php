@@ -33,13 +33,16 @@ Route::get('/menuArtista', [ArtistasController::class, 'index'])->name('menuArti
 
 Route::get('/menuObra', [PinturasController::class, 'indexm'])->name('menuObra');
 
-Route::get('/menuObra', [PinturasController::class, 'create'])->name('menuObra');
 
 Route::get('/addArtist', function () {
     return view('artist.addArtist');
 })->name('addArtist');
 
 Route::post('/addArtist', [ArtistasController::class, 'store'])->name('addArtist');
+
+Route::get('/Artista/{id}', [ArtistasController::class , 'show'])->name('artist-show');
+
+Route::get('/Obra/{id}', [PinturasController::class , 'show'])->name('obra-show');
 
 Route::get('/addObra', function () {
     return view('artist.AddObra');

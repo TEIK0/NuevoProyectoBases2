@@ -47,9 +47,8 @@ class ArtistasController extends Controller
                          ->with('success','Artista creado satisfactoriamente.');
     }
 
-    public function show_in_list($id)
-    {
+    public function show($id){
         $artista = Artista::find($id);
-        return view('menu.recorridoObra', ['artista' => $artista]);       
+        return view('mostrar.showArtista', ['artista' => $artista]);
     }
 }

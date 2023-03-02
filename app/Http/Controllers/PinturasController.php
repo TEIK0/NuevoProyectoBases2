@@ -23,11 +23,7 @@ class PinturasController extends Controller
         return view('menu.recorridoObra', ['pinturas'=>$pinturas ,'artistas' =>$artistas]);
     }
 
-    public function create(){
-        $pinturas = new Pintura();
-        $artistas = Artista::pluck('nombre','id');
-        return view('menu.recorridoObra', ['pinturas'=>$pinturas ,'artistas' =>$artistas]);
-    }
+    
     public function store(Request $request)
     {
         // Validación de datos de entrada
@@ -65,7 +61,8 @@ class PinturasController extends Controller
     }
 
     public function show($id){
-        $pinturas = Pintura::find($id);
-        return view('menu.recorridoObra', ['pinturas' => $pinturas]);
+        $pintura = Pintura::find($id);
+        $artistas = Artista::all();
+        return view('mostrar.showObra', ['pintura' => $pintura, 'artistas' => $artistas]);
     }
 }

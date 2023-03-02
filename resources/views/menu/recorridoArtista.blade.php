@@ -49,7 +49,7 @@
                 </div>
                 <div class="salto"></div>
                 <div class="info" style="font-size: 35px;color: black">
-                    <label class="mx-auto" for="">{{$p->nombre}}</label>
+                    <a href="{{route('artist-show',[$p->id])}}" class="mx-auto" for="">{{$p->nombre}}</a>
                 </div>
                 <div class="info" style="font-size:25px">
                     <label class="mx-auto" for="">{{$p->nacionalidad}}</label>

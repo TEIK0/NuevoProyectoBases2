@@ -49,11 +49,18 @@
                 </div>
                 <div class="salto"></div>
                 <div class="info" style="font-size: 35px;color: black">
-                    <label class="mx-auto" for="">{{$p->nombre}}</label>
+                    <a href="{{route('obra-show',[$p->id])}}" class="mx-auto" for="">{{$p->nombre}}</a>
                 </div>
                 <div class="info" style="font-size:25px">
-                    <label class="mx-auto" for="">{{$p->artista_id}}</label>
+                    @foreach ($artistas as $a)
+
+                        @if($a->id == $p->artista_id)
+
+                            <label class="mx-auto" for="">{{$a->nombre}}</label>
+
+                        @endif
                     
+                    @endforeach
                 </div>
                 <div class="info" style="font-size:25px">
                     <label class="mx-auto" for="">{{$p->precio}}</label>
