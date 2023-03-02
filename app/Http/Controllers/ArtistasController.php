@@ -7,7 +7,6 @@ use App\Models\Artista;
 
 class ArtistasController extends Controller
 {
-    //
     public function index()
     {
         $artistas = Artista::all();
